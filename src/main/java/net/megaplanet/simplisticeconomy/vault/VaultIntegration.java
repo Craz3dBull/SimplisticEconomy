@@ -11,7 +11,6 @@ import java.text.DecimalFormat;
 public class VaultIntegration extends AbstractEconomy implements UnsupportedAccountNameEconomy, UnsupportedBankEconomy {
 
     private final SimplisticEconomy plugin;
-    private static DecimalFormat df2 = new DecimalFormat(".##");
 
     public VaultIntegration(SimplisticEconomy plugin) {
         this.plugin = plugin;
@@ -29,12 +28,12 @@ public class VaultIntegration extends AbstractEconomy implements UnsupportedAcco
 
     @Override
     public int fractionalDigits() {
-        return 2;
+        return 0;
     }
 
     @Override
     public String format(double amount) {
-        return df2.format(amount);
+        return String.valueOf((int) Math.round(amount));
     }
 
     @Override

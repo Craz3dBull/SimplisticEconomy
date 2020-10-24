@@ -23,9 +23,9 @@ public class CommandManager implements CommandExecutor {
         this.messagesFile = plugin.getFileManager().getMessagesFile();
 
         // user commands
-        this.commands.add(new CommandPay(this));
+        //this.commands.add(new CommandPay(this));
         this.commands.add(new CommandBalance(this));
-        this.commands.add(new CommandBalanceTop(this));
+        //this.commands.add(new CommandBalanceTop(this));
 
         // admin commands
         this.commands.add(new CommandGive(this));
@@ -33,14 +33,14 @@ public class CommandManager implements CommandExecutor {
     }
 
     public void register() {
-        plugin.getCommand("pay").setExecutor(this);
-        plugin.getCommand("money").setExecutor(this);
-        plugin.getCommand("bal").setExecutor(this);
+        //plugin.getCommand("pay").setExecutor(this);
         plugin.getCommand("balance").setExecutor(this);
+        plugin.getCommand("bal").setExecutor(this);
+        plugin.getCommand("money").setExecutor(this);
         plugin.getCommand("eco").setExecutor(this);
-        plugin.getCommand("balancetop").setExecutor(this);
-        plugin.getCommand("baltop").setExecutor(this);
-        plugin.getCommand("moneytop").setExecutor(this);
+        //plugin.getCommand("balancetop").setExecutor(this);
+        //plugin.getCommand("baltop").setExecutor(this);
+        //plugin.getCommand("moneytop").setExecutor(this);
     }
 
     @Override

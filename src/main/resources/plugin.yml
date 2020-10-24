@@ -4,11 +4,7 @@ main: net.megaplanet.simplisticeconomy.SimplisticEconomy
 load: STARTUP
 softdepend: [Vault]
 commands:
-  pay:
   eco:
-  money:
-  bal:
   balance:
-  balancetop:
-  baltop:
-  moneytop:
+  bal:
+  money:
